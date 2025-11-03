@@ -1,3 +1,5 @@
+import img1 from '../assets/img1.png';
+
 const projects = [
     {
         id: "1",
@@ -5,11 +7,58 @@ const projects = [
         shortDesc:
             "A smart chatbot built using Dialogflow and React that lets users interact through natural conversations.",
         longDesc:
-            "ChatME is a responsive chatbot web app that integrates Dialogflow for natural language processing. It automates customer interactions and provides instant support through a simple and modern UI. The project demonstrates how conversational AI can be embedded into a React frontend with Node.js handling backend operations.",
+            "ChatME is a responsive chatbot web app that integrates Dialogflow for natural language processing. It automates customer interactions and provides instant support through a simple and modern UI. The project demonstrates how conversational AI can be embedded into a React frontend with Node.js handling backend operations....",
         tags: ["React", "Dialogflow", "Node.js"],
         github: "https://github.com/ShardulDhiwar/ChatME",
         live: "#",
-        images: ["/images/chatme-1.png", "/images/chatme-2.png"],
+        images: [img1, "/images/chatme-2.png"],
+        features: [
+            "Create unique chat rooms with shareable links",
+            "Real-time messaging powered by Socket.IO",
+            "No database required — messages are not persisted",
+            "Clean and modern UI",
+            "Username-based chat system",
+        ],
+        structure: `
+chat-app/
+├── frontend/           # React frontend
+│   ├── src/
+│   │   ├── pages/     # React components
+│   │   ├── App.js     # Main App component
+│   │   └── index.js   # Entry point
+│   └── package.json   # Frontend dependencies
+└── backend/           # Node.js backend
+    ├── server.js      # Socket.IO server
+    └── package.json   # Backend dependencies
+      `,
+        setup: {
+            backend: [
+                "cd backend",
+                "npm install",
+                "npm start",
+                "Server runs on http://localhost:3001",
+            ],
+            frontend: [
+                "cd frontend",
+                "npm install",
+                "npm start",
+                "Frontend runs on http://localhost:3000",
+            ],
+        },
+        usage: [
+            "Open the live demo or local development link",
+            "Click 'Create New Room' to generate a room",
+            "Share the room URL with others",
+            "Enter your username",
+            "Start chatting instantly!",
+        ],
+        technologies: [
+            "React ⚛️",
+            "Socket.IO 🔌",
+            "React Router 🌐",
+            "Node.js 💻",
+            "Express 🚀",
+        ],
     },
     {
         id: "2",
