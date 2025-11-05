@@ -4,14 +4,14 @@ import projects from "../data/projects";
 
 const Closet = () => {
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
+    <div className="min-h-screen bg-orange-100 p-8">
           <h1 className="text-3xl font-bold mb-8 text-center">🗄️ My CodeCloset</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
               <Link
                     to={`/project/${project.id}`}
                     key={project.id}
-                    className="bg-white rounded-lg shadow-md hover:shadow-amber-700 transition-shadow duration-300 p-6 flex flex-col">
+                    className="bg-orange-50 rounded-lg shadow-md hover:shadow-amber-700 transition-shadow duration-300 p-6 flex flex-col">
                     <img
                         src={project.images[0]}
                         alt={project.name}

@@ -10,7 +10,7 @@ const ProjectInfo = () => {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen text-gray-500">
         <h2 className="text-2xl font-semibold">Project not found 😢</h2>
-        <Link to="/" className="text-blue-500 underline mt-4">
+        <Link to="/" className="text-orange-500 underline mt-4">
           Back to Closet
         </Link>
       </div>
@@ -19,22 +19,24 @@ const ProjectInfo = () => {
 
   return (
     <>
-      <div className="bg-gray-50 px-8 pt-5">
+      <div className="bg-orange-100 px-8 pt-5">
         {/* BackButton */}
         <Link
-          to="/"
-          className="text-blue-500 text-xl hover:underline mb-4 inline-block"
+          to={`/project/${project.id}`}
+          className="text-orange-500 text-xl hover:underline mb-4 inline-block"
         >
-          ← Back to Closet
+          ← Back to Project
         </Link>
 
         {/* Header Section */}
-        <h1 className="text-4xl font-bold mb-6 text-center underline">{project.name}</h1>
+        <h1 className="text-4xl font-bold mb-6 text-center underline">
+          {project.name}
+        </h1>
         <p className="text-gray-700  text-center mb-0">{project.shortDesc}</p>
       </div>
 
-      <div className="min-h-screen bg-gray-50 pt-5 pb-10 px-6">
-        <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-md p-8 space-y-8">
+      <div className="min-h-screen bg-orange-100 pt-5 pb-10 px-6">
+        <div className="max-w-4xl mx-auto bg-orange-50 rounded-2xl shadow-md p-8 space-y-8">
           {/* Image */}
           {project.images?.[0] && (
             <img
