@@ -5,16 +5,16 @@ const projects = [
         id: "1",
         name: "ChatME",
         shortDesc:
-            "A smart chatbot built using Dialogflow and React that lets users interact through natural conversations.",
+            "A simple real-time chat application built with React and Socket.IO that lets users create and join chat rooms instantly.",
         longDesc:
-            "ChatME is a responsive chatbot web app that integrates Dialogflow for natural language processing. It automates customer interactions and provides instant support through a simple and modern UI. The project demonstrates how conversational AI can be embedded into a React frontend with Node.js handling backend operations....",
-        tags: ["React", "Dialogflow", "Node.js"],
+            "ChatME is a real-time chat application that enables users to create and join chat rooms with ease. Built using React for the frontend and Socket.IO for real-time communication, it delivers smooth, instant messaging without any database dependency. The app features a clean UI, username-based chats, and shareable room links — making it ideal for quick, temporary group conversations.",
+        tags: ["React", "Socket.IO", "Node.js", "Express"],
         github: "https://github.com/ShardulDhiwar/ChatME",
-        live: "#",
+        live: "https://chat-me-omega.vercel.app/",
         images: [img1, "/images/chatme-2.png"],
         features: [
             "Create unique chat rooms with shareable links",
-            "Real-time messaging powered by Socket.IO",
+            "Real-time messaging using Socket.IO",
             "No database required — messages are not persisted",
             "Clean and modern UI",
             "Username-based chat system",
@@ -30,7 +30,7 @@ chat-app/
 └── backend/           # Node.js backend
     ├── server.js      # Socket.IO server
     └── package.json   # Backend dependencies
-      `,
+  `,
         setup: {
             backend: [
                 "cd backend",
@@ -46,10 +46,10 @@ chat-app/
             ],
         },
         usage: [
-            "Open the live demo or local development link",
-            "Click 'Create New Room' to generate a room",
-            "Share the room URL with others",
-            "Enter your username",
+            "Open the live demo at https://chat-me-omega.vercel.app/ or run locally on http://localhost:3000",
+            "Click 'Create New Room' to generate a new chat room",
+            "Share the room URL with others to chat together",
+            "Enter your username when joining a room",
             "Start chatting instantly!",
         ],
         technologies: [
@@ -62,124 +62,503 @@ chat-app/
     },
     {
         id: "2",
-        name: "ReactsGameHub",
+        name: "ReactGameHub",
         shortDesc:
-            "A gaming hub UI made using React and Tailwind where users can explore popular games.",
+            "A mini game hub with Snake, Tic Tac Toe, and Memory Game built in React.",
         longDesc:
-            "ReactsGameHub is a visually engaging platform built with React and Tailwind CSS. It fetches live data from a public games API to display trending titles, genres, and ratings. The app focuses on smooth routing, clean UI design, and dynamic state handling to deliver a fun and interactive browsing experience for gamers.",
-        tags: ["React", "Tailwind", "API"],
-        github: "https://github.com/ShardulDhiwar/ReactsGameHub",
-        live: "#",
+            "ReactGameHub is a fun web-based mini game hub built with React.js and Vite. It brings together three classic games — Snake, Tic Tac Toe, and Memory Game — all inside a smooth, responsive UI styled with Tailwind CSS.",
+        tags: ["React", "Tailwind", "Vite"],
+        github: "https://github.com/ShardulDhiwar/ReactGameHub",
+        live: "https://reacts-game-hub.vercel.app/",
         images: ["/images/gamehub-1.png", "/images/gamehub-2.png"],
+        features: [
+            "🐍 Classic Snake Game with keyboard controls",
+            "❌⭕ Two-player Tic Tac Toe with win detection",
+            "🧠 Memory Game with score tracking",
+            "🎨 Responsive UI with Tailwind CSS",
+            "⚛️ Built using React + Vite for lightning-fast performance",
+        ],
+        structure: `
+ReactGameHub/
+├── public/
+├── src/
+│   ├── components/         # Game components (SnakeGame, TicTacToe, MemoryGame)
+│   ├── assets/             # Images & icons
+│   ├── App.jsx             # Root component
+│   ├── main.jsx            # Entry point
+│   └── index.css           # Global styles
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
+  `,
+        setup: [
+            "Clone the repository",
+            "Run npm install to install dependencies",
+            "Start the dev server using npm run dev",
+        ],
+        usage: [
+            "Play fun classic games directly in your browser!",
+            "Enjoy Snake, Tic Tac Toe, and Memory Game — all in one place!",
+        ],
+        technologies: ["React.js", "Vite", "Tailwind CSS", "JavaScript (ES6+)"],
     },
-    {
+{
         id: "3",
         name: "FixTheUI",
         shortDesc:
-            "A small front-end improvement project focused on redesigning and refining UI layouts.",
+            "A UI improvement project focused on responsive, accessible, and modern layouts.",
         longDesc:
-            "FixTheUI is a UI enhancement project created to practice clean front-end design. It focuses on simplifying layouts, improving responsiveness, and applying modern CSS principles. The goal was to improve an existing UI’s look and usability using only HTML, CSS, and JavaScript.",
-        tags: ["HTML", "CSS", "JavaScript"],
+            "FixTheUI refines, revamps, and elevates user interfaces for better usability and visual polish. It focuses on improving existing UI components and layouts — enhancing responsiveness, accessibility, and code structure for a modern feel.",
+        tags: ["React", "Tailwind", "Vite"],
         github: "https://github.com/ShardulDhiwar/FixTheUI",
-        live: "#",
-        images: ["/images/fixtheui-1.png"],
+        live: "https://fix-the-ui.vercel.app/",
+        images: ["/images/fixtheui-1.png", "/images/fixtheui-2.png"],
+        features: [
+            "🎨 Modern responsive UI redesigns",
+            "📱 Fully mobile-friendly layout",
+            "🧩 Clean and maintainable component structure",
+            "🔧 Code improvements for readability and maintainability",
+            "🚀 Live demo hosted on Vercel",
+        ],
+        structure: `
+FixTheUI/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   ├── styles/
+│   └── App.jsx
+├── tailwind.config.js
+└── vite.config.js
+  `,
+        setup: {
+            frontend: [
+                "Clone the repository",
+                "Navigate to the project folder",
+                "Run npm install to install dependencies",
+                "Start the development server using npm run dev",
+            ],
+        },
+        usage: [
+            "Open the live demo or run it locally.",
+            "Explore the redesigned and responsive UI components.",
+            "Check cross-device compatibility and responsiveness.",
+        ],
+        technologies: [
+            "React.js ⚛️",
+            "Tailwind CSS 💨",
+            "HTML 🧩",
+            "JavaScript (ES6+) 💻",
+            "Vite ⚡",
+            "ESLint 🧠",
+            "Vercel 🚀",
+        ],
     },
+
     {
         id: "4",
-        name: "ReactJobs",
+        name: "Password Generator App",
         shortDesc:
-            "A job listing app built using React and React Router to explore and filter jobs easily.",
+            "A simple and secure password generator built with React and Tailwind CSS.",
         longDesc:
-            "ReactJobs is a React-based job board that uses React Router for seamless navigation between job listings and details. It demonstrates how routing, context, and API calls can work together to create a smooth user experience. Users can browse available jobs, read full descriptions, and explore filters dynamically.",
-        tags: ["React", "React Router", "API"],
-        github: "https://github.com/ShardulDhiwar/ReactJobs",
-        live: "#",
-        images: ["/images/reactjobs-1.png", "/images/reactjobs-2.png"],
+            "The Password Generator App lets users instantly create strong, random passwords. It offers customization options for length, numbers, and symbols — and a one-click copy feature. Designed to be lightweight, fast, and responsive.",
+        tags: ["React", "Tailwind", "JavaScript"],
+        github: "https://github.com/ShardulDhiwar/password-generator",
+        live: "https://password-generator-shardul.vercel.app/",
+        images: ["/images/passwordgenerator-1.png", "/images/passwordgenerator-2.png"],
+        features: [
+            "✅ Generate random passwords instantly",
+            "🧩 Customize password length (10–30)",
+            "🔢 Include numbers and symbols",
+            "📋 One-click copy to clipboard",
+            "🎨 Clean and minimal Tailwind UI",
+        ],
+        structure: `
+PasswordGenerator/
+├── public/
+├── src/
+│   ├── components/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+└── tailwind.config.js
+  `,
+        setup: {
+            frontend: [
+                "Clone the repository",
+                "Run npm install to install dependencies",
+                "Start the development server using npm run dev",
+                "Visit http://localhost:5173 to view the app",
+            ],
+        },
+        usage: [
+            "Open the app in your browser.",
+            "Choose password length and toggle symbol/number options.",
+            "Click 'Generate' to create a password.",
+            "Copy it with one click!",
+        ],
+        technologies: ["React.js ⚛️", "Tailwind CSS 💨", "JavaScript (ES6+) 💻"],
     },
     {
         id: "5",
-        name: "PasswordGenerator",
+        name: "Laundry Wallah",
         shortDesc:
-            "A lightweight tool to create strong, secure passwords using React and JavaScript.",
+            "An online laundry booking system with live cost updates, animations, and responsive design.",
         longDesc:
-            "PasswordGenerator is a utility web app built using React that allows users to generate random, secure passwords. It supports custom length, uppercase/lowercase letters, numbers, and symbols. The app showcases React’s state management and conditional rendering in a practical security-focused tool.",
-        tags: ["React", "JavaScript", "Security"],
-        github: "https://github.com/ShardulDhiwar/PasswordGenerator",
-        live: "#",
-        images: ["/images/passwordgenerator-1.png"],
+            "Laundry Wallah is a responsive web app that simplifies the process of booking laundry services online. Users can dynamically add or remove items, instantly see total cost updates, and confirm bookings with a personalized message. The app also includes a newsletter subscription feature via EmailJS, animations using AOS, and a smooth hamburger menu for mobile navigation.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        github: "https://github.com/ShardulDhiwar/laundry-wallah",
+        live: "https://laundry-wallah.vercel.app/",
+        images: ["/images/laundry-1.png", "/images/laundry-2.png"],
+        features: [
+            "🧼 Dynamic service selection with live total updates",
+            "💰 Automatic cart calculation",
+            "📩 Booking confirmation message",
+            "📨 Newsletter subscription using EmailJS",
+            "📱 Fully responsive design for all devices",
+            "🍔 Animated hamburger navigation",
+            "✨ AOS scroll-based animations for UI effects",
+        ],
+        structure: `
+Laundry-Wallah/
+├── index.html
+├── style.css
+├── script.js
+├── /assets
+│   ├── images/
+│   └── icons/
+└── README.md
+  `,
+        setup: {
+            frontend: [
+                "Clone the repository using git clone https://github.com/ShardulDhiwar/laundry-wallah.git",
+                "Navigate to the project folder using cd laundry-wallah",
+                "Open index.html in your browser to run the app",
+            ],
+        },
+        usage: [
+            "Open the site and choose laundry services you want.",
+            "Add or remove items — watch the total update in real-time.",
+            "Confirm your booking and subscribe to the newsletter if you wish.",
+        ],
+        technologies: [
+            "HTML 🧩",
+            "CSS 🎨",
+            "JavaScript 💻",
+            "AOS ✨",
+            "EmailJS 📩",
+            "Ionicons 🔆",
+        ],
     },
+
     {
         id: "6",
-        name: "LaundryWallah",
+        name: "Weather App",
         shortDesc:
-            "A laundry management web app for booking, tracking, and managing laundry services.",
+            "A responsive web app to view live weather conditions, forecasts, and AQI using the OpenWeatherMap API.",
         longDesc:
-            "LaundryWallah is a web app designed to simplify laundry service management. Users can book pickups, track ongoing orders, and view delivery updates. It combines React for the frontend and Node.js + MongoDB for backend functionality. The project focuses on CRUD operations and clean UI design for service-based apps.",
-        tags: ["React", "Node.js", "MongoDB"],
-        github: "https://github.com/ShardulDhiwar/LaundryWallah",
-        live: "#",
-        images: ["/images/laundrywallah-1.png"],
+            "The Weather App provides real-time weather data and 7-day forecasts for any city worldwide. It features an intuitive UI, includes air quality index (AQI) data, and allows users to switch between current and forecast modes. Built with HTML, CSS, and JavaScript — powered by the OpenWeatherMap API and Webpack for bundling.",
+        tags: ["JavaScript", "API", "Weather", "OpenWeatherMap"],
+        github: "https://github.com/ShardulDhiwar/weather-app",
+        live: "https://weather-app-shardul.vercel.app/",
+        images: ["/images/weather-1.png", "/images/weather-2.png"],
+        features: [
+            "🌍 Search weather by city name",
+            "🔁 Toggle between current weather and 7-day forecast",
+            "🌬️ Display air quality index, humidity, and wind speed",
+            "📱 Responsive user interface",
+            "🔒 Secure API key management using dotenv",
+        ],
+        structure: `
+Weather-App/
+├── public/
+│   └── index.html
+├── src/
+│   ├── js/
+│   ├── styles/
+│   ├── index.js
+│   └── api.js
+├── .env
+├── webpack.config.js
+├── package.json
+└── README.md
+  `,
+        setup: {
+            frontend: [
+                "Clone the repository using git clone https://github.com/ShardulDhiwar/weather-app.git",
+                "Navigate to the folder using cd weather-app",
+                "Create a .env file and add your OpenWeatherMap API key",
+                "Install dependencies using npm install",
+                "Run the app using npm start",
+            ],
+        },
+        usage: [
+            "Search for a city to view current weather details.",
+            "Toggle between current weather and 7-day forecast.",
+            "Check air quality, humidity, and wind speed data.",
+        ],
+        technologies: [
+            "HTML 🌐",
+            "CSS 🎨",
+            "JavaScript (ES6+) 💻",
+            "Webpack ⚙️",
+            "OpenWeatherMap API ☁️",
+            "dotenv-webpack 🔒",
+        ],
     },
     {
         id: "7",
-        name: "TodoApp",
+        name: "Portfolio Website",
         shortDesc:
-            "A simple and clean React-based to-do list app to manage your daily tasks.",
+            "A personal portfolio website showcasing projects, skills, and contact details — built with HTML, CSS, and JavaScript.",
         longDesc:
-            "TodoApp is a productivity-focused React project that helps users track and organize daily tasks. It implements React hooks for managing state, allowing users to add, edit, mark complete, and delete tasks. The project demonstrates component reusability, local storage usage, and minimalist UI design.",
-        tags: ["React", "Hooks", "CSS"],
-        github: "https://github.com/ShardulDhiwar/TodoApp",
-        live: "#",
-        images: ["/images/todoapp-1.png"],
+            "Shardul Dhiwar’s Portfolio is a personal website highlighting my development journey, featured projects, and professional skills. It has a clean and minimal UI, responsive layout, and easy navigation. Hosted on GitHub Pages, this portfolio serves as both a resume and an interactive showcase of my work.",
+        tags: ["HTML", "CSS", "JavaScript", "Portfolio"],
+        github: "https://github.com/ShardulDhiwar/Portfolio",
+        live: "https://sharduldhiwar.github.io/Portfolio/",
+        images: ["/images/portfolio-1.png", "/images/portfolio-2.png"],
+        features: [
+            "✨ Clean and responsive design",
+            "📱 Mobile-friendly layout",
+            "🧩 Project showcase section with detailed previews",
+            "📬 Contact section with email and social links",
+            "🌐 Hosted on GitHub Pages",
+        ],
+        structure: `
+Portfolio/
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│   ├── images/
+│   └── icons/
+└── README.md
+  `,
+        setup: {
+            frontend: [
+                "Clone the repository using git clone https://github.com/ShardulDhiwar/Portfolio.git",
+                "Navigate to the project folder using cd Portfolio",
+                "Open index.html directly in your browser to view the site",
+            ],
+        },
+        usage: [
+            "Visit the live site or open index.html locally.",
+            "Scroll through the homepage to explore projects and skills.",
+            "Use the contact section to reach out or view social profiles.",
+        ],
+        technologies: [
+            "HTML5 🌐",
+            "CSS3 🎨",
+            "JavaScript 💻",
+            "GitHub Pages 🚀",
+        ],
     },
     {
         id: "8",
-        name: "WeatherApp",
+        name: "Simple To-Do Web App",
         shortDesc:
-            "A real-time weather forecasting app that displays temperature and city details.",
+            "A clean and responsive to-do list app built with HTML, CSS, and JavaScript — organize daily, weekly, and monthly tasks.",
         longDesc:
-            "WeatherApp fetches live weather data from a public API and displays temperature, humidity, and sky conditions in real-time. Built using React and Axios, it demonstrates API integration, data fetching, and error handling. The app also features a responsive design with intuitive user input for searching cities.",
-        tags: ["React", "API", "JavaScript"],
-        github: "https://github.com/ShardulDhiwar/WeatherApp",
-        live: "#",
-        images: ["/images/weatherapp-1.png", "/images/weatherapp-2.png"],
+            "Simple To-Do Web App is a lightweight task manager built entirely with frontend technologies. It lets users add, complete, and delete tasks divided into three sections — Today, This Week, and This Month. The app is fully responsive and runs directly in the browser without any backend.",
+        tags: ["HTML", "CSS", "JavaScript", "To-Do App"],
+        github: "https://github.com/ShardulDhiwar/todo-web-app",
+        live: "https://todo-web-app-shardul.vercel.app/",
+        images: ["/images/todoapp-1.png", "/images/todoapp-2.png"],
+        features: [
+            "📝 Add new tasks to Today, Week, or Month sections",
+            "✅ Mark tasks as completed with visual distinction",
+            "❌ Delete tasks when no longer needed",
+            "🎨 Simple, clean, and user-friendly interface",
+            "📱 Fully responsive across devices",
+            "⚡ Fast and lightweight — runs entirely in the browser",
+        ],
+        structure: `
+todo-web-app/
+├── index.html       # Main HTML file
+├── styles.css       # App styling
+└── script.js        # JavaScript for task management
+  `,
+        setup: {
+            frontend: [
+                "Clone the repository using git clone https://github.com/ShardulDhiwar/todo-web-app.git",
+                "Navigate into the folder using cd todo-web-app",
+                "Open index.html directly in your browser to start using the app",
+            ],
+        },
+        usage: [
+            "Open the app in your browser.",
+            "Add tasks under Today, This Week, or This Month categories.",
+            "Mark completed tasks or delete them when done.",
+        ],
+        technologies: [
+            "HTML5 🌐",
+            "CSS3 🎨",
+            "JavaScript (ES6) 💻",
+        ],
     },
+
     {
         id: "9",
-        name: "VAST - A Mental Health Chatbot",
+        name: "VAST - Mental Health Chatbot",
         shortDesc:
-            "An AI-powered chatbot built to support mental health conversations and emotional well-being.",
+            "A full-stack mental health chatbot built with Flask, Dialogflow, and PostgreSQL that provides conversational support to users.",
         longDesc:
-            "VAST is an AI-driven chatbot created to promote mental health awareness and provide emotional assistance. Built using Dialogflow, Python, and React, it helps users talk through stress, anxiety, and personal issues in a private digital space. It focuses on empathetic design and conversational AI principles.",
-        tags: ["AI", "React", "Dialogflow", "Python"],
-        github: "https://github.com/ShardulDhiwar/VAST--A-Mental-Health-Chatbot",
+            "VAST is a mental health chatbot web application designed to provide emotional support and resources through AI-driven conversations. Built with Flask for the backend, Dialogflow for natural language understanding, and PostgreSQL for database management, it offers a secure user authentication system and intelligent dialogue handling. The project demonstrates an integration of cloud AI with web backend technologies for a meaningful real-world use case.",
+        tags: ["Flask", "Dialogflow", "PostgreSQL", "Python"],
+        github: "https://github.com/ShardulDhiwar/mental-health-chatbot",
         live: "#",
-        images: ["/images/vast-1.png"],
+        images: ["/images/vast-1.png", "/images/vast-2.png"],
+        features: [
+            "🧠 AI-driven chatbot powered by Google Dialogflow",
+            "🔐 User authentication with secure password storage (Flask-Bcrypt)",
+            "💬 RESTful chat API with Flask",
+            "🗃️ PostgreSQL database integration for user management",
+            "🧩 JSON-based intent loading and import capability",
+            "🔑 Google Cloud service account integration for Dialogflow access",
+            "⚙️ Flask-Login session handling",
+        ],
+        structure: `
+mental-health-chatbot/
+├── app.py                        # Flask backend
+├── structured_mental_health.json # Dialogflow intent data
+├── vast-ytfa-36b7391b4430.json   # Google Cloud service account key
+├── templates/
+│   ├── login.html
+│   └── signup.html
+├── requirements.txt
+└── README.md
+  `,
+        setup: {
+            backend: [
+                "Clone the repository using git clone https://github.com/ShardulDhiwar/mental-health-chatbot.git",
+                "Navigate into the folder using cd mental-health-chatbot",
+                "Set up a virtual environment (python -m venv venv && source venv/bin/activate)",
+                "Install dependencies using pip install -r requirements.txt",
+                "Configure PostgreSQL database and update credentials in app.py",
+                "Enable Google Dialogflow API and export credentials with service account key",
+            ],
+        },
+        usage: [
+            "Run the app using python app.py",
+            "Visit http://localhost:5000 to access the chatbot interface",
+            "Sign up or log in to start chatting with the AI bot",
+            "Ask mental health-related questions and get empathetic responses",
+        ],
+        technologies: [
+            "Python 🐍",
+            "Flask ⚙️",
+            "PostgreSQL 🗃️",
+            "Dialogflow 🤖",
+            "Flask-Bcrypt 🔐",
+            "Flask-Login 🔑",
+            "Google Cloud API ☁️",
+        ],
     },
     {
         id: "10",
-        name: "Virtual Mouse Controller",
+        name: "Gesture-Controlled Virtual Mouse",
         shortDesc:
-            "A Python-based computer vision app that lets you control the mouse with hand gestures.",
+            "A Python-based application that lets you control your computer using hand gestures via your webcam, powered by MediaPipe, OpenCV, and Flask.",
         longDesc:
-            "Virtual Mouse Controller is a computer vision project that uses OpenCV and MediaPipe to track hand movements via webcam and translate them into mouse actions. Users can move the cursor, click, or scroll using specific hand gestures. It demonstrates AI-driven gesture recognition and real-time tracking.",
-        tags: ["Python", "OpenCV", "Mediapipe"],
-        github: "https://github.com/ShardulDhiwar/Virtual-Mouse-Controller",
+            "Gesture-Controlled Virtual Mouse is an innovative computer vision project that transforms hand gestures into real-time system actions. It uses MediaPipe for hand-tracking, OpenCV for video processing, and Flask for the web interface. With simple hand gestures, users can move the cursor, click, scroll, and even adjust system volume and brightness. This project showcases the integration of AI-based gesture recognition with practical computer control.",
+        tags: ["Python", "Flask", "OpenCV", "MediaPipe", "AI"],
+        github: "https://github.com/ShardulDhiwar/gesture-controlled-virtual-mouse",
         live: "#",
-        images: ["/images/virtualmouse-1.png"],
+        images: ["/images/virtualmouse-1.png", "/images/virtualmouse-2.png"],
+        features: [
+            "🔁 Control mouse movement using hand gestures",
+            "👏 Perform clicks, double-clicks, and right-clicks with specific finger signs",
+            "🔊 Adjust system volume and screen brightness using pinch gestures",
+            "🌐 Web interface built with Flask, HTML, CSS, and JavaScript",
+            "🎥 Real-time gesture recognition using MediaPipe and OpenCV",
+            "⚙️ Works cross-platform (Windows/Linux) with webcam access",
+        ],
+        structure: `
+gesture-controlled-virtual-mouse/
+├── app.py                 # Flask backend server
+├── gesture_control.py     # Core logic for gesture recognition
+├── templates/
+│   ├── index.html         # Web interface
+│   └── layout.html
+├── static/
+│   ├── style.css
+│   └── script.js
+├── requirements.txt
+└── README.md
+  `,
+        setup: {
+            backend: [
+                "Clone the repository using git clone https://github.com/ShardulDhiwar/gesture-controlled-virtual-mouse.git",
+                "Navigate into the folder using cd gesture-controlled-virtual-mouse",
+                "Install dependencies using pip install -r requirements.txt",
+                "Ensure your webcam is enabled and system permissions are granted",
+            ],
+        },
+        usage: [
+            "Run the app using python app.py",
+            "Open the local server in your browser (http://localhost:5000)",
+            "Click 'Start Gesture Control' to begin tracking",
+            "Use hand gestures to move the cursor, click, scroll, or adjust system volume/brightness",
+        ],
+        technologies: [
+            "Python 🐍",
+            "Flask ⚙️",
+            "OpenCV 🎥",
+            "MediaPipe ✋",
+            "PyAutoGUI 🖱️",
+            "PyCaw 🔊",
+            "Screen Brightness Control 💡",
+            "HTML/CSS/JavaScript 🌐",
+        ],
     },
     {
         id: "11",
-        name: "myPortfolio",
+        name: "ReactJobs",
         shortDesc:
-            "A personal portfolio website to showcase my projects, skills, and contact info.",
+            "A sleek job listing app built with React and Tailwind CSS that lets users browse and filter jobs by category or location.",
         longDesc:
-            "myPortfolio is a personal portfolio site built with React and Tailwind CSS. It highlights my work, projects, and professional information in a responsive, single-page layout. It also acts as a live resume — clean, fast, and minimal in design.",
-        tags: ["React", "Tailwind", "Portfolio"],
-        github: "https://github.com/ShardulDhiwar",
+            "ReactJobs is a responsive and fast job listing web app built using React and Tailwind CSS. It displays job openings from a local data source and allows users to filter listings by category, location, or salary range. Designed with simplicity and performance in mind, ReactJobs provides a seamless experience for exploring job opportunities without needing a backend.",
+        tags: ["React", "Tailwind", "Vite"],
+        github: "https://github.com/ShardulDhiwar/ReactJobs",
         live: "#",
-        images: ["/images/portfolio-1.png"],
+        images: ["/images/reactjobs-1.png", "/images/reactjobs-2.png"],
+        features: [
+            "🧩 Dynamic job listings loaded from a local data file",
+            "🔍 Filter jobs by category or location",
+            "🖥️ Dedicated job detail pages",
+            "📱 Responsive and clean UI",
+            "⚡ Built using React + Vite",
+        ],
+        structure: `
+ReactJobs/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── components/       # Reusable components
+│   ├── data/             # jobs.js file with listings
+│   ├── pages/            # Home and JobDetails pages
+│   ├── App.jsx           # Router setup
+│   ├── main.jsx          # React root
+│   └── index.css         # Tailwind styles
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
+  `,
+        setup: [
+            "Clone the repository",
+            "Run npm install to install dependencies",
+            "Start the app using npm run dev",
+            "Open http://localhost:5173 to view it",
+        ],
+        usage: [
+            "Browse available jobs on the homepage",
+            "Use filters to find jobs by location or category",
+            "Click any job to view its details",
+        ],
+        technologies: ["React.js", "Tailwind CSS", "Vite", "JavaScript (ES6+)"],
     },
+
 ];
 
 export default projects;

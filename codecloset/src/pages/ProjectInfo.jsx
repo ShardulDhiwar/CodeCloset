@@ -4,7 +4,7 @@ import projects from "../data/projects";
 
 const ProjectInfo = () => {
   const { id } = useParams();
-  const project = projects.find((p) => p.id === id); // ✅ ID is a string
+  const project = projects.find((p) => p.id === id); 
 
   if (!project) {
     return (
