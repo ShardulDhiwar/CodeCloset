@@ -1,6 +1,96 @@
 import img1 from '../assets/img1.png';
+import img2 from '../assets/img2.png';
+import ReactGame1 from '../assets/ReactGame1.png';
+import ReactGame2 from '../assets/ReactGame2.png';
+import ReactGame3 from '../assets/ReactGame3.png';
+import ReactGame4 from '../assets/ReactGame4.png';
+import FTU1 from '../assets/FTU1.png';
+import FTU2 from '../assets/FTU2.png';
+import FTU3 from '../assets/FTU3.png';
+import FTU4 from '../assets/FTU4.png';
+import PG1 from '../assets/PG1.png';
+import PG2 from '../assets/PG2.png';
+import LW1 from '../assets/LW1.png';
+import LW2 from '../assets/LW2.png';
+import LW3 from '../assets/LW3.png';
+import WA0 from '../assets/WA0.png';
+import WA1 from '../assets/WA1.png';
+import WA2 from '../assets/WA2.png';
+import WA3 from '../assets/WA3.png';
+import PF1 from '../assets/PF1.png';
+import PF2 from '../assets/PF2.png';
+import PF3 from '../assets/PF3.png';
+import PF4 from '../assets/PF4.png';
+import PF5 from '../assets/PF5.png';
+import TD1 from '../assets/TD1.png';
+import TD2 from '../assets/TD2.png';
+import VAST1 from '../assets/VAST1.png';
+import VAST2 from '../assets/VAST2.png';
+import VAST3 from '../assets/VAST3.png';
+import VM0 from '../assets/VM0.png';
+import VM1 from '../assets/VM1.png';
+import VM2 from '../assets/VM2.png';
+import VM3 from '../assets/VM3.png';
+import VM4 from '../assets/VM4.png';
+import RJ1 from '../assets/RJ1.png';
+import RJ2 from '../assets/RJ2.png';
+import RJ3 from '../assets/RJ3.png';
+import CC1 from '../assets/CC1.png';
+import CC2 from '../assets/CC2.png';
+import CC3 from '../assets/CC3.png';
+import CC4 from '../assets/CC4.png';
+import CC5 from '../assets/CC5.png';
+
+
 
 const projects = [
+    {
+        id: "0",
+        name: "CodeCloset",
+        shortDesc:
+            "A personal portfolio web app built with React and Tailwind CSS that showcases all coding projects in an organized, interactive layout.",
+        longDesc:
+            "Code Closet is a modern React-based project showcase that serves as a digital portfolio. It organizes and displays multiple personal projects with detailed information such as features, setup instructions, and technologies used. With smooth navigation, responsive design, and a clean UI powered by Tailwind CSS, it provides an elegant and engaging way to explore my development work.",
+        tags: ["React", "Tailwind", "Vite"],
+        github: "https://github.com/ShardulDhiwar/CodeCloset",
+        live: "https://code-closet.vercel.app",
+        images: [CC1,CC2,CC3,CC4,CC5],
+        features: [
+            "🗂️ Showcase multiple coding projects with detailed info pages",
+            "🏠 Home and About pages with smooth navigation",
+            "🎨 Tailwind CSS for responsive modern UI",
+            "⚡ Built with React + Vite for fast performance",
+            "🌐 Hosted live on Vercel",
+        ],
+        structure: `
+your-react-app/
+├── src/
+│   ├── components/      # Navbar, Footer, ProjectCard
+│   ├── pages/           # Home, Closet, About, ProjectInfo
+│   ├── data/            # projects.js with all project data
+│   ├── App.jsx          # Routing setup
+│   ├── main.jsx         # ReactDOM root
+│   └── index.css        # Tailwind base styles
+├── package.json
+├── vite.config.js
+└── tailwind.config.js
+  `,
+        setup: [
+            "Clone the repository using git clone https://github.com/ShardulDhiwar/CodeCloset.git",
+            "Navigate into the project folder (cd CodeCloset)",
+            "Install dependencies using npm install",
+            "Start the development server using npm run dev",
+            "Access the app at http://localhost:5173",
+        ],
+        usage: [
+            "Visit the Home page to get an overview",
+            "Open the Closet page to browse all projects",
+            "Click on any project to view its details",
+            "Use the About page to learn more about the developer",
+        ],
+        technologies: ["React ⚛️", "Tailwind CSS 🎨", "React Router 🌐", "Vite ⚡", "Vercel 🚀"],
+    },
+
     {
         id: "1",
         name: "ChatME",
@@ -11,7 +101,7 @@ const projects = [
         tags: ["React", "Socket.IO", "Node.js", "Express"],
         github: "https://github.com/ShardulDhiwar/ChatME",
         live: "https://chat-me-omega.vercel.app/",
-        images: [img1, "/images/chatme-2.png"],
+        images: [img1, img2],
         features: [
             "Create unique chat rooms with shareable links",
             "Real-time messaging using Socket.IO",
@@ -70,7 +160,7 @@ chat-app/
         tags: ["React", "Tailwind", "Vite"],
         github: "https://github.com/ShardulDhiwar/ReactGameHub",
         live: "https://reacts-game-hub.vercel.app/",
-        images: ["/images/gamehub-1.png", "/images/gamehub-2.png"],
+        images: [ReactGame1, ReactGame2, ReactGame3, ReactGame4],
         features: [
             "🐍 Classic Snake Game with keyboard controls",
             "❌⭕ Two-player Tic Tac Toe with win detection",
@@ -102,7 +192,7 @@ ReactGameHub/
         ],
         technologies: ["React.js", "Vite", "Tailwind CSS", "JavaScript (ES6+)"],
     },
-{
+    {
         id: "3",
         name: "FixTheUI",
         shortDesc:
@@ -112,7 +202,7 @@ ReactGameHub/
         tags: ["React", "Tailwind", "Vite"],
         github: "https://github.com/ShardulDhiwar/FixTheUI",
         live: "https://fix-the-ui.vercel.app/",
-        images: ["/images/fixtheui-1.png", "/images/fixtheui-2.png"],
+        images: [FTU1, FTU2, FTU3, FTU4],
         features: [
             "🎨 Modern responsive UI redesigns",
             "📱 Fully mobile-friendly layout",
@@ -165,7 +255,7 @@ FixTheUI/
         tags: ["React", "Tailwind", "JavaScript"],
         github: "https://github.com/ShardulDhiwar/password-generator",
         live: "https://password-generator-shardul.vercel.app/",
-        images: ["/images/passwordgenerator-1.png", "/images/passwordgenerator-2.png"],
+        images: [PG1, PG2],
         features: [
             "✅ Generate random passwords instantly",
             "🧩 Customize password length (10–30)",
@@ -210,7 +300,7 @@ PasswordGenerator/
         tags: ["HTML", "CSS", "JavaScript"],
         github: "https://github.com/ShardulDhiwar/laundry-wallah",
         live: "https://laundry-wallah.vercel.app/",
-        images: ["/images/laundry-1.png", "/images/laundry-2.png"],
+        images: [LW1, LW2, LW3],
         features: [
             "🧼 Dynamic service selection with live total updates",
             "💰 Automatic cart calculation",
@@ -262,7 +352,7 @@ Laundry-Wallah/
         tags: ["JavaScript", "API", "Weather", "OpenWeatherMap"],
         github: "https://github.com/ShardulDhiwar/weather-app",
         live: "https://weather-app-shardul.vercel.app/",
-        images: ["/images/weather-1.png", "/images/weather-2.png"],
+        images: [WA0, WA3, WA1, WA2],
         features: [
             "🌍 Search weather by city name",
             "🔁 Toggle between current weather and 7-day forecast",
@@ -317,7 +407,7 @@ Weather-App/
         tags: ["HTML", "CSS", "JavaScript", "Portfolio"],
         github: "https://github.com/ShardulDhiwar/Portfolio",
         live: "https://sharduldhiwar.github.io/Portfolio/",
-        images: ["/images/portfolio-1.png", "/images/portfolio-2.png"],
+        images: [PF1, PF2, PF3, PF4, PF5],
         features: [
             "✨ Clean and responsive design",
             "📱 Mobile-friendly layout",
@@ -364,7 +454,7 @@ Portfolio/
         tags: ["HTML", "CSS", "JavaScript", "To-Do App"],
         github: "https://github.com/ShardulDhiwar/todo-web-app",
         live: "https://todo-web-app-shardul.vercel.app/",
-        images: ["/images/todoapp-1.png", "/images/todoapp-2.png"],
+        images: [TD1, TD2],
         features: [
             "📝 Add new tasks to Today, Week, or Month sections",
             "✅ Mark tasks as completed with visual distinction",
@@ -408,7 +498,7 @@ todo-web-app/
         tags: ["Flask", "Dialogflow", "PostgreSQL", "Python"],
         github: "https://github.com/ShardulDhiwar/mental-health-chatbot",
         live: "#",
-        images: ["/images/vast-1.png", "/images/vast-2.png"],
+        images: [VAST1, VAST2, VAST3],
         features: [
             "🧠 AI-driven chatbot powered by Google Dialogflow",
             "🔐 User authentication with secure password storage (Flask-Bcrypt)",
@@ -465,7 +555,7 @@ mental-health-chatbot/
         tags: ["Python", "Flask", "OpenCV", "MediaPipe", "AI"],
         github: "https://github.com/ShardulDhiwar/gesture-controlled-virtual-mouse",
         live: "#",
-        images: ["/images/virtualmouse-1.png", "/images/virtualmouse-2.png"],
+        images: [VM1, VM0, VM2, VM3, VM4],
         features: [
             "🔁 Control mouse movement using hand gestures",
             "👏 Perform clicks, double-clicks, and right-clicks with specific finger signs",
@@ -522,7 +612,7 @@ gesture-controlled-virtual-mouse/
         tags: ["React", "Tailwind", "Vite"],
         github: "https://github.com/ShardulDhiwar/ReactJobs",
         live: "#",
-        images: ["/images/reactjobs-1.png", "/images/reactjobs-2.png"],
+        images: [RJ1, RJ2, RJ3],
         features: [
             "🧩 Dynamic job listings loaded from a local data file",
             "🔍 Filter jobs by category or location",
